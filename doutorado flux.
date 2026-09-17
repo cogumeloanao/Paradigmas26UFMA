@@ -1,0 +1,7 @@
+/*1- início - digitar nome de aluno e notas de disciplinas
+2- calcular média
+3- classificar média
+- se nota maior que 7 - aproveitado para doutorado
+- se for menor - não aproveitado para doutorado
+4- saída:
+mostra nome, média, e aproveitamento
