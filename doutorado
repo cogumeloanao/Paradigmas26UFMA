@@ -1,0 +1,40 @@
+def entrada ():
+    nome = input("Usuario: ")
+    nota1=float(input("Nota da disciplina 1: "))
+    nota2=float(input("Nota da disciplina 2: "))
+    nota3=float(input("Nota da disciplina 3: "))
+
+    return nome, nota1, nota2, nota3
+
+def calcular_media(nota1, nota2, nota3):
+    return(nota1 + nota2 + nota3)/3
+
+def classificacao(media):
+    if media >= 9.5:
+        return "A"
+    elif media >= 8.0:
+        return "B"
+    elif media >= 7.0:
+        return "C"
+    elif media >= 6.0:
+        return "D"
+    else:
+        return "E"
+
+def aproveitamento(classificacao):
+    if classificacao == "A" or classificacao == "B" or classificacao == "C":
+        return "Aproveitado para o doutorado!"
+    else:
+        return "Nao aproveitado para o doutorado."
+
+nome, nota1, nota2, nota3 = entrada()
+
+media = calcular_media(nota1, nota2, nota3)
+classif = classificacao (media)
+resultado = aproveitamento(classif)
+
+print("\nRESULTADO")
+print("Aluno: ", nome)
+print("Media: ", round(media, 2))
+print("Classificacao: ", classif)
+print("Aproveitamento: ", resultado)
